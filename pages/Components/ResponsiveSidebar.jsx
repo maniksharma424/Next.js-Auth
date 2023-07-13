@@ -4,12 +4,29 @@ import { MdLocalOffer } from "react-icons/md";
 import { BsFillCalendarEventFill } from "react-icons/bs";
 import { FaRegUserCircle } from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
-
-const Sidebar = () => {
+import { RxCross1 } from "react-icons/rx";
+import { useDispatch } from "react-redux";
+import { defaultOpacity } from "@/slices/dashboardSlice";
+import { motion } from "framer-motion";
+const ResponsiveSidebar = ({ handleShowModal }) => {
+  const dispatch = useDispatch();
   return (
-    <div className="w-full h-full bg-black sm:rounded-2xl">
+    <motion.div
+    initial={{ x: "80%" }} // Initial position (off-screen to the right)
+    animate={{ x: 0 }} // Animation to the final position (0)
+    transition={{ duration: 0.3 }} // Animation duration
+    className="w-1/2 h-full absolute right-0 top-0 bg-black sm:rounded-2xl">
       <div id="menu" className="w-full h-1/2 text-white">
-       
+        <div className="flex justify-end items-center p-5 text-[20px]">
+          <button
+            onClick={() => {
+              handleShowModal();
+              dispatch(defaultOpacity());
+            }}
+          >
+            <RxCross1 />
+          </button>
+        </div>
         <div
           id="heading"
           className="sm:h-2/5 h-1/5  sm:text-[36px] text-[24px] font-[700] flex justify-center items-center"
@@ -57,8 +74,8 @@ const Sidebar = () => {
           <li className="w-2/5">Contact us</li>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
-export default Sidebar;
+export default ResponsiveSidebar;

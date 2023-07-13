@@ -6,23 +6,51 @@ import { RiHandbagLine } from "react-icons/ri";
 import { MdOutlineLocalOffer } from "react-icons/md";
 import { FaRegThumbsUp } from "react-icons/fa";
 import { LuUsers } from "react-icons/lu";
+import { useState } from "react";
+import { createPortal } from "react-dom";
+import { CiMenuBurger } from "react-icons/ci";
+
+import ResponsiveSidebar from "./ResponsiveSidebar";
+import { useDispatch } from "react-redux";
+import { changeOpacity } from "@/slices/dashboardSlice";
 
 const DashboardInfo = () => {
+  const [showModal, setShowModal] = useState(false);
+  const dispatch = useDispatch()
   return (
     <div className="w-full sm:h-1/4 h-1/3 ">
-      <div id="info" className="w-full sm:h-1/3 h-1/2  flex flex-wrap  sm:justify-between  items-center">
-        <h1 className="sm:w-1/5 w-full h-1/3 flex justify-center items-center  font-[700] text-[24px]">Dashboard</h1>
+      <div
+        id="info"
+        className="w-full sm:h-1/3 h-1/2  flex flex-wrap  sm:justify-between  items-center"
+      >
+        <button
+          onClick={() => {
+            setShowModal(true);
+            dispatch(changeOpacity())
+          }}
+          className="sm:hidden flex w-full justify-end items-center"
+        >
+          <CiMenuBurger />
+        </button>
+        <h1 className="sm:w-1/5 w-full h-1/3 flex justify-center items-center  font-[700] text-[24px]">
+          Dashboard
+        </h1>
         <div
           id="searchbar"
-          className=" sm:w-1/3 w-full sm:h-full h-2/3 flex justify-around items-center text-[20px]"
+          className=" sm:w-1/3 w-full sm:h-full h-1/3 flex justify-around items-center text-[20px]"
         >
           <input
             type="text"
             className="rounded-md px-3 w-full sm:w-3/5 py-1 text-[#B0B0B0]  text-[14px]"
-            placeholder="search....    ;"
+            placeholder="search....    "
           />
           <BiBell className="sm:flex hidden " />
-          <Image className="sm:flex hidden" width={25} height={25} src="/../public/profile-image.png" />
+          <Image
+            className="sm:flex hidden"
+            width={25}
+            height={25}
+            src="/../public/profile-image.png"
+          />
         </div>
       </div>
       <div className="h-2/3 w-full">
@@ -73,6 +101,9 @@ const DashboardInfo = () => {
           </li>
         </ul>
       </div>
+      {showModal ? createPortal(<ResponsiveSidebar handleShowModal={()=>{
+        setShowModal(!showModal)
+      }} />, document.body) : null}
     </div>
   );
 };
