@@ -17,4 +17,5 @@ const dashboardSlice = createSlice({
   },
 });
 export default dashboardSlice.reducer;
+
 export const { changeOpacity ,defaultOpacity} = dashboardSlice.actions;
