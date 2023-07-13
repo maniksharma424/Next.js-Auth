@@ -12,12 +12,12 @@ import { CiMenuBurger } from "react-icons/ci";
 
 import ResponsiveSidebar from "./ResponsiveSidebar";
 import { useDispatch } from "react-redux";
-import { changeOpacity } from "@/slices/dashboardSlice";
+import { changeOpacity } from "@/Slices/dashboardSlice";
 
 const DashboardInfo = () => {
   const [showModal, setShowModal] = useState(false);
   const dispatch = useDispatch()
-  
+
   return (
     <div className="w-full sm:h-1/4 h-1/3 ">
       <div
