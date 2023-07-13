@@ -12,13 +12,13 @@ const Dashboard = () => {
   if (status === "authenticated")
     return (
       <>
-        <div className=" sm:h-screen h-[1200px] w-full flex font-Montserrat p-5 bg-[#F5F5F5]">
+        <div className=" sm:h-screen h-[1300px] w-full flex font-Montserrat p-5 bg-[#F5F5F5]">
           <div id="sidebard" className="h-full sm:w-1/5 sm:flex hidden ">
             <Sidebar />
           </div>
           <div
             id="Dashboard-Info"
-            className="sm:w-5/6 w-full h-full flex flex-col justify-between sm:px-20 py-4"
+            className="sm:w-5/6 w-full h-full flex flex-col justify-between sm:px-20 sm:py-4"
           >
             <DashboardInfo />
             <Graph

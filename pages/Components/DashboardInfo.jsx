@@ -9,65 +9,65 @@ import { LuUsers } from "react-icons/lu";
 
 const DashboardInfo = () => {
   return (
-    <div className="w-full h-1/4 ">
-      <div className="w-full h-1/3  flex justify-between items-center">
-        <h1 className="sm:w-1/5 w-1/2 font-[700] text-[24px]">Dashboard</h1>
+    <div className="w-full sm:h-1/4 h-1/3 ">
+      <div id="info" className="w-full sm:h-1/3 h-1/2  flex flex-wrap  sm:justify-between  items-center">
+        <h1 className="sm:w-1/5 w-full h-1/3 flex justify-center items-center  font-[700] text-[24px]">Dashboard</h1>
         <div
           id="searchbar"
-          className=" sm:w-1/3 w-1/2  h-full flex justify-around items-center text-[20px]"
+          className=" sm:w-1/3 w-full sm:h-full h-2/3 flex justify-around items-center text-[20px]"
         >
           <input
             type="text"
-            className="rounded-md px-3 py-1 text-[#B0B0B0]  text-[14px]"
-            placeholder="search....                       &#128269;"
+            className="rounded-md px-3 w-full sm:w-3/5 py-1 text-[#B0B0B0]  text-[14px]"
+            placeholder="search....    ;"
           />
-          <BiBell />
-          <Image width={25} height={25} src="/../public/profile-image.png" />
+          <BiBell className="sm:flex hidden " />
+          <Image className="sm:flex hidden" width={25} height={25} src="/../public/profile-image.png" />
         </div>
       </div>
       <div className="h-2/3 w-full">
         <ul className="h-full w-full py-3 flex justify-between flex-wrap">
-          <li className="w-1/5 h-full bg-[#DDEFE0] rounded-2xl p-3 ">
+          <li className="sm:w-1/5 w-2/5 m-1  h-fit bg-[#DDEFE0] rounded-2xl p-3 ">
             <p className="w-full h-1/3 flex justify-end font-[700] sm:text-[20px]">
               <RiHandbagLine />
             </p>
-            <p className="w-full justify-center flex sm:font-[400] sm:text-[14px]">
+            <p className="w-full justify-center flex sm:font-[400] sm:text-[14px] text-[10px]">
               Total Revenues
             </p>
-            <p className="w-full justify-center flex sm:font-[600] sm:text-[24px]">
+            <p className="w-full justify-center flex font-[600] sm:text-[24px] text-[14px] ">
               $ 2, 129, 430
             </p>
           </li>
-          <li className="w-1/5 h-full bg-[#F4ECDD] rounded-2xl p-3 ">
+          <li className="sm:w-1/5 w-2/5 m-1  h-fit bg-[#F4ECDD] rounded-2xl p-3 ">
             <p className="w-full h-1/3 flex justify-end font-[700] sm:text-[20px]">
               <MdOutlineLocalOffer />
             </p>
-            <p className="w-full justify-center flex sm:font-[400] sm:text-[14px]">
+            <p className="w-full justify-center flex sm:font-[400] sm:text-[14px] text-[10px]">
               Total Transactions
             </p>
-            <p className="w-full justify-center flex sm:font-[600] sm:text-[24px]">
+            <p className="w-full justify-center flex font-[600] sm:text-[24px] text-[14px] ">
               1,520
             </p>
           </li>
-          <li className="w-1/5 h-full bg-[#EFDADA] rounded-2xl p-3 ">
+          <li className="sm:w-1/5 w-2/5 m-1  h-fit bg-[#EFDADA] rounded-2xl p-3 ">
             <p className="w-full h-1/3 flex justify-end font-[700] sm:text-[20px]">
               <FaRegThumbsUp />
             </p>
-            <p className="w-full justify-center flex sm:font-[400] sm:text-[14px]">
+            <p className="w-full justify-center flex sm:font-[400] sm:text-[14px] text-[10px]">
               Total Likes
             </p>
-            <p className="w-full justify-center flex sm:font-[600] sm:text-[24px]">
+            <p className="w-full justify-center flex font-[600]  sm:text-[24px] text-[14px] ">
               9,721
             </p>
           </li>
-          <li className="w-1/5 h-full bg-[#DEE0EF] rounded-2xl p-3 ">
+          <li className="sm:w-1/5 w-2/5 m-1  h-fit bg-[#DEE0EF] rounded-2xl p-3 ">
             <p className="w-full h-1/3 flex justify-end font-[700] sm:text-[20px]">
               <LuUsers />
             </p>
-            <p className="w-full justify-center flex sm:font-[400] sm:text-[14px]">
+            <p className="w-full justify-center flex sm:font-[400] sm:text-[14px] text-[10px]">
               Total Users
             </p>
-            <p className="w-full justify-center flex sm:font-[600] sm:text-[24px]">
+            <p className="w-full justify-center flex font-[600] sm:text-[24px] text-[14px] ">
               892
             </p>
           </li>
