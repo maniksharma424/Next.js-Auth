@@ -6,7 +6,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
 import { RxCross1 } from "react-icons/rx";
 import { useDispatch } from "react-redux";
-import { defaultOpacity } from "@/Slices/dashboardSlice";
+import { defaultOpacity } from "@/Slices/dashboardSlice.js";
 import { motion } from "framer-motion";
 const ResponsiveSidebar = ({ handleShowModal }) => {
   const dispatch = useDispatch();

@@ -12,7 +12,7 @@ import { CiMenuBurger } from "react-icons/ci";
 
 import ResponsiveSidebar from "./ResponsiveSidebar";
 import { useDispatch } from "react-redux";
-import { changeOpacity } from "@/Slices/dashboardSlice";
+import { changeOpacity } from "@/Slices/dashboardSlice.js";
 
 const DashboardInfo = () => {
   const [showModal, setShowModal] = useState(false);
