@@ -17,7 +17,7 @@ export const useData = ()=>{
                 data3:res.slice(45, 100),
     
               }))
-              .catch((err) => console.log(err))
+              .catch((err) => {throw new Error(err)})
           } catch (error) {
             throw new Error(error);
           }
