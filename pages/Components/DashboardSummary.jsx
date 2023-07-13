@@ -2,19 +2,22 @@ import React, { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 import { BsChevronCompactDown } from "react-icons/bs";
 import { FiChevronRight } from "react-icons/fi";
-
+import { useState } from "react";
+import { useData } from "@/customHooks/useData";
 const DashboardSummary = () => {
+
   const chartRef = useRef(null);
 
+  const data = useData()
   useEffect(() => {
     const ctx = chartRef.current.getContext("2d");
     const chart = new Chart(ctx, {
       type: "pie",
       data: {
-        labels: ["Super Hoodies", "Custom Short Pants", "Basic Tees"],
+        labels: ["Posts 1", "Posts 2", "Posts 3"],
         datasets: [
           {
-            data: [14, 31, 55],
+            data: [data?.data1?.length, data?.data2?.length, data?.data3?.length],
             backgroundColor: ["#EE8484", "#F6DC7D", "#98D89E"],
           },
         ],
@@ -43,7 +46,7 @@ const DashboardSummary = () => {
     return () => {
       chart.destroy();
     };
-  }, []);
+  }, [data]);
   return (
     <div className="w-full sm:h-1/4 h-1/3  flex justify-between flex-wrap">
       <div id="box-1" className=" h-fit sm:w-1/2 w-full  sm:pr-6 ">
