@@ -1,7 +1,9 @@
 import React from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
-
+import Image from "next/image";
+import google from "../public/google.png"
+import apple from "../public/apple.png"
 const Login = () => {
   const { data: session } = useSession();
   const router = useRouter();
@@ -48,11 +50,11 @@ const Login = () => {
                 }}
                 className="bg-white sm:py-2 sm:px-3 py-1 px-2 flex  items-center rounded-lg sm:justify-start justify-center   border-[1px] sm:border-0 "
               >
-                <img
+                <Image
                   height={15}
                   width={15}
                   className="mx-1"
-                  src="https://icons-for-free.com/iconfiles/png/512/color+google+media+network+social+icon-1320086080668511532.png"
+                  src={google}
                 />
                 Sign in with Google
               </button>
@@ -62,11 +64,11 @@ const Login = () => {
                 }}
                 className="bg-white sm:py-2 sm:px-3 py-1 px-2 flex  items-center rounded-lg sm:mt-0 mt-2 sm:justify-start justify-center   border-[1px] sm:border-0"
               >
-                <img
-                  height={10}
-                  width={10}
+                <Image
+                  height={25}
+                  width={25}
                   className="mx-1"
-                  src="https://seeklogo.com/images/A/apple-logo-52C416BDDD-seeklogo.com.png"
+                  src={apple}
                 />
                 Sign in with Apple
               </button>

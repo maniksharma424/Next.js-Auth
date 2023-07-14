@@ -11,6 +11,8 @@ import { CiMenuBurger } from "react-icons/ci";
 import ResponsiveSidebar from "./ResponsiveSidebar";
 import { useDispatch } from "react-redux";
 import { changeOpacity } from "@/Slices/dashboardSlice.js";
+import profileImage from ".../public/profileImage.png"
+import Image from "next/image";
 
 const DashboardInfo = () => {
   const [showModal, setShowModal] = useState(false);
@@ -44,11 +46,11 @@ const DashboardInfo = () => {
             placeholder="search....    "
           />
           <BiBell className="sm:flex hidden " />
-          <img
+          <Image
             className="sm:flex hidden"
             width={25}
             height={25}
-            src="https://tricky-photoshop.com/wp-content/uploads/2017/08/6.jpg"
+            src={profileImage}
           />
         </div>
       </div>
