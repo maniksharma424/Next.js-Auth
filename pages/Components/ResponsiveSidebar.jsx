@@ -12,9 +12,9 @@ const ResponsiveSidebar = ({ handleShowModal }) => {
   const dispatch = useDispatch();
   return (
     <motion.div
-    initial={{ x: "80%" }} // Initial position (off-screen to the right)
-    animate={{ x: 0 }} // Animation to the final position (0)
-    transition={{ duration: 0.3 }} // Animation duration
+    initial={{ x: 0 }} 
+    animate={{ x: 0 }} 
+    transition={{ duration: 0.3 }} 
     className="w-1/2 h-full absolute right-0 top-0 bg-black sm:rounded-2xl">
       <div id="menu" className="w-full h-1/2 text-white">
         <div className="flex justify-end items-center p-5 text-[20px]">
