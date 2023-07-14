@@ -1,7 +1,5 @@
 import React from "react";
 import { BiBell } from "react-icons/bi";
-import Image from "next/image";
-import { AiOutlineSearch } from "react-icons/ai";
 import { RiHandbagLine } from "react-icons/ri";
 import { MdOutlineLocalOffer } from "react-icons/md";
 import { FaRegThumbsUp } from "react-icons/fa";
@@ -46,11 +44,11 @@ const DashboardInfo = () => {
             placeholder="search....    "
           />
           <BiBell className="sm:flex hidden " />
-          <Image
+          <img
             className="sm:flex hidden"
             width={25}
             height={25}
-            src="/../public/profile-image.png"
+            src="https://tricky-photoshop.com/wp-content/uploads/2017/08/6.jpg"
           />
         </div>
       </div>

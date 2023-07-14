@@ -1,7 +1,7 @@
 import React from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
-import Image from "next/image";
+
 const Login = () => {
   const { data: session } = useSession();
   const router = useRouter();
@@ -48,11 +48,11 @@ const Login = () => {
                 }}
                 className="bg-white sm:py-2 sm:px-3 py-1 px-2 flex  items-center rounded-lg sm:justify-start justify-center   border-[1px] sm:border-0 "
               >
-                <Image
+                <img
                   height={15}
                   width={15}
                   className="mx-1"
-                  src="/../public/Google-color -icon.png"
+                  src="https://icons-for-free.com/iconfiles/png/512/color+google+media+network+social+icon-1320086080668511532.png"
                 />
                 Sign in with Google
               </button>
@@ -62,11 +62,11 @@ const Login = () => {
                 }}
                 className="bg-white sm:py-2 sm:px-3 py-1 px-2 flex  items-center rounded-lg sm:mt-0 mt-2 sm:justify-start justify-center   border-[1px] sm:border-0"
               >
-                <Image
-                  height={20}
-                  width={20}
+                <img
+                  height={10}
+                  width={10}
                   className="mx-1"
-                  src="/../public/apple-logo.png"
+                  src="https://seeklogo.com/images/A/apple-logo-52C416BDDD-seeklogo.com.png"
                 />
                 Sign in with Apple
               </button>
@@ -99,8 +99,8 @@ const Login = () => {
                 Sign In
               </button>
             </div>
-            <span className="w-full flex justify-center sm:text-[16px] text-[12px]">
-              <span className="text-[#858585]">Don't have an account ? </span>
+            <span className="w-full flex justify-center sm:text-[14px] text-[12px]">
+              <span className="text-[#858585]">Don't have an account? </span>
               <button
                 onClick={() => {
                   signIn();
