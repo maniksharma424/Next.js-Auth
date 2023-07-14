@@ -11,7 +11,7 @@ import { CiMenuBurger } from "react-icons/ci";
 import ResponsiveSidebar from "./ResponsiveSidebar";
 import { useDispatch } from "react-redux";
 import { changeOpacity } from "@/Slices/dashboardSlice.js";
-import profileImage from ".../public/profileImage.png"
+import profileImage from "/Users/Repositories/Next-Auth/next-auth/public/profileImage.png"
 import Image from "next/image";
 
 const DashboardInfo = () => {
