@@ -6,11 +6,11 @@ import DashboardSummary from "./Components/DashboardSummary";
 import { useSelector } from "react-redux";
 const Dashboard = () => {
 
-  const { data: session, status } = useSession();
+  const { data: session, status } = useSession({ required: true });
   const opacity = useSelector((store) => store.dashboardSlice.opacity);
 
  
-  // if (status === "authenticated")
+  if (status === "authenticated")
     return (
       <>
         <div
