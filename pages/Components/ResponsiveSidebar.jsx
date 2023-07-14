@@ -12,7 +12,7 @@ const ResponsiveSidebar = ({ handleShowModal }) => {
   const dispatch = useDispatch();
   return (
     <motion.div
-    initial={{ x: 10 }} 
+    initial={{ x: -40 }} 
     animate={{ x: 0 }} 
     transition={{ duration: 0.3 }} 
     className="w-1/2 h-[700px] absolute right-0 top-0 bg-black sm:rounded-2xl">
