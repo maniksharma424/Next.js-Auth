@@ -13,7 +13,6 @@ module.exports = {
     extend: {
       screens: {
         'md': '1050px',
-        // => @media (min-width: 992px) { ... }
       },
       fontFamily: {
         Montserrat: ["Montserrat"],
