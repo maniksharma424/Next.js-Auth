@@ -9,7 +9,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+  
     extend: {
+      screens: {
+        'md': '1050px',
+        // => @media (min-width: 992px) { ... }
+      },
       fontFamily: {
         Montserrat: ["Montserrat"],
        },

@@ -79,11 +79,11 @@ const Graph = ({ data }) => {
   }, [data]);
 
   return (
-    <div className=" sm:h-2/5 h-1/5 w-full   bg-white rounded-2xl sm:px-8 sm:py-4 px-4 py-2">
+    <div className=" md:h-2/5 h-1/5 w-full   bg-white rounded-2xl md:px-8 md:py-4 px-4 py-2">
       <div className="h-1/5 w-full flex justify-between">
         <div className="w-1/2 h-full">
-          <p className="sm:text-[18px] text-[12px] sm:font-[700]">Activities</p>
-          <p className="flex justify-start items-center sm:text-[12px] text-[8px] sm:font-[400]  text-[#858585] ">
+          <p className="md:text-[18px] text-[12px] md:font-[700]">Activities</p>
+          <p className="flex justify-start items-center md:text-[12px] text-[8px] md:font-[400]  text-[#858585] ">
             May - Jun 2021{" "}
             <span className="ml-1">
               {" "}
@@ -91,14 +91,14 @@ const Graph = ({ data }) => {
             </span>
           </p>
         </div>
-        <div className="sm:w-2/5 w-1/2 flex sm:justify-between justify-around sm:items-center items-start sm:text-[14px] text-[10px] ">
+        <div className="md:w-2/5 w-1/2 flex md:justify-between justify-around md:items-center items-start md:text-[14px] text-[10px] ">
             <p>
-                <span className="sm:px-[8px] px-[4px]    rounded-3xl bg-[#E9A0A0]"></span>
-                <span className="sm:ml-2 ml-1">Guest</span>
+                <span className="md:px-[8px] px-[4px]    rounded-3xl bg-[#E9A0A0]"></span>
+                <span className="md:ml-2 ml-1">Guest</span>
             </p>
             <p>
-                <span className="sm:px-[8px] px-[4px]   rounded-3xl bg-[#9BDD7C]"></span>
-                <span className="sm:ml-2 ml-1">User</span>
+                <span className="md:px-[8px] px-[4px]   rounded-3xl bg-[#9BDD7C]"></span>
+                <span className="md:ml-2 ml-1">User</span>
             </p> 
         </div>
 
