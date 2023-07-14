@@ -20,6 +20,7 @@ const Dashboard = () => {
             opacity ? "blur-sm opacity-70 h-[600px]" : "h-[1300px]"
           }`}
         >
+          
           <div id="sidebard" className="h-full sm:w-1/5 w-2/3 sm:flex hidden ">
             <Sidebar />
           </div>
