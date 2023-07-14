@@ -18,14 +18,17 @@ const ResponsiveSidebar = ({ handleShowModal }) => {
     className="w-1/2 h-screen absolute right-0 top-0 bg-black md:rounded-2xl">
       <div id="menu" className="w-full h-1/2 text-white">
         <div className="flex justify-end items-center p-5 text-[20px]">
-          <button
+          <motion.button
+          whileTap={{
+            scale:1.1
+          }}
             onClick={() => {
               handleShowModal();
               dispatch(defaultOpacity());
             }}
           >
             <RxCross1 />
-          </button>
+          </motion.button>
         </div>
         <div
           id="heading"

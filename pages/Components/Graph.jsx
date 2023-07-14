@@ -79,7 +79,7 @@ const Graph = ({ data }) => {
   }, [data]);
 
   return (
-    <div className=" md:h-2/5 h-1/5 w-full   bg-white rounded-2xl md:px-8 md:py-4 px-4 py-2">
+    <div className=" md:h-2/5 h-1/5 w-full   bg-white rounded-2xl md:px-8 md:py-4 px-4 py-2 border-[1px]">
       <div className="h-1/5 w-full flex justify-between">
         <div className="w-1/2 h-full">
           <p className="md:text-[18px] text-[12px] md:font-[700]">Activities</p>
@@ -106,7 +106,7 @@ const Graph = ({ data }) => {
       <div className="h-4/5 w-full">
         <canvas
           ref={chartRef}
-          className="w-full h-full "
+          className="w-full h-full shadow-xl rounded-lg"
         />
       </div>
     </div>

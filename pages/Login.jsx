@@ -4,7 +4,9 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import google from "../public/google.png"
 import apple from "../public/apple.png"
+import { motion } from "framer-motion";
 const Login = () => {
+
   const { data: session } = useSession();
   const router = useRouter();
   if (session) {
@@ -44,11 +46,18 @@ const Login = () => {
               id="google-SignIn"
               className="flex md:flex-row flex-col  w-full justify-between md:text-[12px] text-[10px] text-[#858585]  "
             >
-              <button
+              <motion.button
+              
+whileHover={{
+  scale:1.1
+}}
+whileTap={{
+  scale:0.8
+}}
                 onClick={() => {
                   signIn();
                 }}
-                className="bg-white md:py-2 md:px-3 py-1 px-2 flex  items-center rounded-lg md:justify-start justify-center   border-[1px] md:border-0 "
+                className="bg-white md:py-2 md:px-3 py-1 px-2 flex  items-center rounded-lg md:justify-start justify-center   border-[1px]  "
               >
                 <Image
                   height={15}
@@ -57,12 +66,20 @@ const Login = () => {
                   src={google}
                 />
                 Sign in with Google
-              </button>
-              <button
+              </motion.button>
+              <motion.button
+              
+              whileHover={{
+                scale:1.1
+              }}
+              whileTap={{
+                scale:0.8
+              }}
+                      
                 onClick={() => {
                   signIn();
                 }}
-                className="bg-white md:py-2 md:px-3 py-1 px-2 flex  items-center rounded-lg md:mt-0 mt-2 md:justify-start justify-center   border-[1px] md:border-0"
+                className="bg-white md:py-2 md:px-3 py-1 px-2 flex  items-center rounded-lg md:mt-0 mt-2 md:justify-start justify-center   border-[1px] "
               >
                 <Image
                   height={25}
@@ -71,7 +88,7 @@ const Login = () => {
                   src={apple}
                 />
                 Sign in with Apple
-              </button>
+              </motion.button>
             </div>
             <div
               id="Login-Crediantials"
@@ -81,29 +98,40 @@ const Login = () => {
                 <p>Email address</p>
                 <input
                   type="text"
-                  className="w-full md:p-1 p-[1px] md:rounded-xl rounded-md bg-[#EAEAEA]"
+                  className="w-full md:p-1 p-[1px] md:rounded-xl rounded-md bg-[#EAEAEA] border-[1px]"
                 />
               </div>
               <div className="w-full">
                 <p>Passoword</p>
                 <input
                   type="password"
-                  className="w-full md:p-1 p-[1px] md:rounded-xl rounded-md bg-[#EAEAEA]"
+                  className="w-full md:p-1 p-[1px] md:rounded-xl rounded-md bg-[#EAEAEA] border-[1px]"
                 />
               </div>
               <span className="text-[#346BD4] ">Forgot passowrd ?</span>
-              <button
+              <motion.button
+              
+              
+              whileTap={{
+                scale:0.8
+              }}
+                      
                 onClick={() => {
                   signIn();
                 }}
                 className="w-full bg-black text-white py-1 rounded-lg md:font-[600] "
               >
                 Sign In
-              </button>
+              </motion.button>
             </div>
             <span className="w-full flex justify-center md:text-[14px] text-[12px]">
               <span className="text-[#858585]">Don't have an account? </span>
-              <button
+              <motion.button
+        
+              whileTap={{
+                scale:0.8
+              }}
+                      
                 onClick={() => {
                   signIn();
                 }}
@@ -111,7 +139,7 @@ const Login = () => {
               >
                 {" "}
                 Register here
-              </button>
+              </motion.button>
             </span>
           </div>
         </div>

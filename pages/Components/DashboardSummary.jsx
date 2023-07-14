@@ -49,8 +49,8 @@ const DashboardSummary = () => {
   }, [data]);
   return (
     <div className="w-full md:h-1/4 h-1/3  flex justify-between flex-wrap">
-      <div id="box-1" className=" h-fit md:w-1/2 w-full  md:pr-6 ">
-        <div className="h-full w-full bg-white rounded-2xl px-5 py-4">
+      <div id="box-1" className=" h-fit md:w-1/2 w-full  md:pr-6  ">
+        <div className="h-full w-full bg-white rounded-2xl px-5 py-4 md:shadow-none shadow-lg border-[1px]">
           <p className="w-full h-1/5 flex justify-between items-center md:px-10 md:text-[17px] text-[12px]">
             <span className="w-1/2 flex justify-center">Top Products</span>
             <span className="flex justify-start w-1/2 items-center text-[#858585] md:text-[12px]">
@@ -87,8 +87,8 @@ const DashboardSummary = () => {
           </div>
         </div>
       </div>
-      <div id="box-2" className=" h-fit  md:w-1/2 w-full rounded-2xl md:pl-6">
-        <div className="h-full w-full bg-white rounded-2xl flex-col px-5 py-4">
+      <div id="box-2" className=" h-fit  md:w-1/2 w-full rounded-2xl md:pl-6 ">
+        <div className="h-full w-full bg-white rounded-2xl flex-col px-5 py-4 md:shadow-none shadow-lg border-[1px]">
           <div className="h-1/5 w-full">
             <p className="w-full flex justify-between items-center md:text-[17px] text-[12px]">
               <span>Today's Schedule</span>
