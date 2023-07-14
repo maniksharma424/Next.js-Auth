@@ -15,7 +15,7 @@ const ResponsiveSidebar = ({ handleShowModal }) => {
     initial={{ x: -40 }} 
     animate={{ x: 0 }} 
     transition={{ duration: 0.3 }} 
-    className="w-1/2 h-[700px] absolute right-0 top-0 bg-black md:rounded-2xl">
+    className="w-1/2 h-screen absolute right-0 top-0 bg-black md:rounded-2xl">
       <div id="menu" className="w-full h-1/2 text-white">
         <div className="flex justify-end items-center p-5 text-[20px]">
           <button
